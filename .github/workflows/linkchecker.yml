@@ -17,6 +17,6 @@ jobs:
 
         
       - name: execute linkchecker 
-        run: linkchecker -r 2 --check-extern -f linkcheckerrc ttps://simplifier.net/guide/UK-Core-Implementation-Guide-STU3-Sequence/Home?version=current
+        run: linkchecker -r 2 --check-extern -f linkcheckerrc https://simplifier.net/guide/UK-Core-Implementation-Guide-STU3-Sequence/Home?version=current
         
         
