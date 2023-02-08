@@ -12,8 +12,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          apt install python3-bs4 python3-dnspython python3-requests
-          pip3 install linkchecker
+          sudo apt install python3-bs4 python3-dnspython python3-requests
+          sudo pip3 install linkchecker
 
         
       - name: execute linkchecker 
