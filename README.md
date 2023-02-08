@@ -4,3 +4,6 @@ This is a personal repo for any python scripts I have created to help with FHIR 
 
 ## Create_Codesystems 
 This file is intended to create a CodeSystems expansion set for codes that reside on a website.
+
+## errorChecker
+Checks for any html errors on a website. Will find all links on the target page and interate through them.
