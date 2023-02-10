@@ -17,6 +17,9 @@ jobs:
 
         
       - name: execute linkchecker 
-        run: linkchecker -r 2 --check-extern --no-status -f linkcheckerrc $(head -n 1 website.txt)
+        run: |
+          linkchecker -r 2 --check-extern --no-status -f linkcheckerrc $(head -n 1 website.txt)
+          echo Process Complete
+        
         
         
