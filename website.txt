@@ -1,0 +1,6 @@
+https://simplifier.net/guide/test-for-ks2/Home?version=1.0.0
+
+### IMPORTANT INFO ###
+# Add website link on the first line. Single Link only, no multiple. 
+# Needs to be on the https://simplifier.net/ 
+# All relevant pages to be scanned need to have a link from the website link above, e.g. within the banner
