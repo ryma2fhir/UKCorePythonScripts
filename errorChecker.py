@@ -5,6 +5,9 @@ This script checks all the pages within a website for any error messages
 from bs4 import BeautifulSoup # this module helps in web scrapping.
 import requests  # this module helps us to download a web page
 
+with open('website.txt', 'r') as file:
+    data = file.read().rstrip()
+    
 '''retrieve all links within the page, including the banner, and filters to remove href="#" or external links and returning a list of valid links'''
 def ListOfLinks(url):
     soup = RequestData(url)
@@ -37,4 +40,4 @@ def RequestData(url):
     soup = BeautifulSoup(data,"html.parser")
     return soup
 
-FindErrors('https://simplifier.net/guide/uk-core-implementation-guide-stu3-sequence?version=current')
+FindErrors(data)
