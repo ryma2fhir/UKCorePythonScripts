@@ -9,6 +9,9 @@ Note this only works with the Simplifier website due to prefixing the links with
 from bs4 import BeautifulSoup # this module helps in web scrapping.
 import requests  # this module helps us to download a web page
 
+    
+with open('website.txt', 'r') as file:
+    data = file.read().rstrip()
 
 '''retrieve all links within the page, including the banner, and filters to remove href="#" or external links and returning a list of valid links'''
 def ListOfLinks(url):
@@ -22,11 +25,13 @@ def ListOfLinks(url):
     unique_websites = list(list_set)
     return unique_websites
 
+''' get webpage data ''' 
 def RequestData(url):
     data  = requests.get(url).text
     soup = BeautifulSoup(data,"html.parser")
     return soup
 
+''' change internal links to external, and write to OutputLinks.txt '''
 def OutputLinks(url):
     unique_websites = ListOfLinks(url)
     unique_websites = sorted(unique_websites)
@@ -36,4 +41,4 @@ def OutputLinks(url):
         a.write(linkOutput+ '\n')
     a.close()
     
-OutputLinks('https://simplifier.net/guide/uk-core-implementation-guide-stu3-sequence?version=current')
+OutputLinks(data)
