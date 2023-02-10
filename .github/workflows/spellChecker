@@ -1,4 +1,4 @@
-name: run SpellChecker
+name: run spellChecker
 
 on: [push]
 
