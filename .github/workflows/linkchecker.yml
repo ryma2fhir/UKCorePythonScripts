@@ -1,6 +1,9 @@
 name: run linkchecker
 
-on: [push]
+on: 
+  push:
+    paths:
+      - actions/**
 
 jobs:
   build:
