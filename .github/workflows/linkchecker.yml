@@ -15,11 +15,12 @@ jobs:
           sudo apt install python3-bs4 python3-dnspython python3-requests
           pip3 install linkchecker
 
-        
+      - name: Check link
+        run: |
+          wget -q --spider $(head -n 1 website.txt)
+      
       - name: execute linkchecker 
         run: |
-          echo ##### NOTE: JOB WILL FAIL IF BROKEN LINK IS FOUND ##### 
-          echo $(head -n 1 website.txt)
           linkchecker -r 2 --check-extern --no-status -f linkcheckerrc $(head -n 1 website.txt) || test $? = 1;
                 
         
