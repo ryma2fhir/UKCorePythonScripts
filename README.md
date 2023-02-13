@@ -23,4 +23,4 @@ https://www.gnu.org/software/wget/manual/wget.html#Option-Syntax
 -nv *Turn off verbose without being completely quiet (use ‘-q’ for that), which means that error messages and basic information still get printed.* 
 -O *The documents will not be written to the appropriate files, but all will be concatenated together and written to file. If ‘-’ is used as file, documents will be printed to standard output, disabling link conversion.*
 
-TODO get personal dictinary working
+TODO get personal dictinary working ###
