@@ -1,4 +1,4 @@
-https://simplifier.net/guide/test-for-ks2/Home?version=1.0.0
+http://example.com/
 
 ### IMPORTANT INFO ###
 # Add website link on the first line. Single Link only, no multiple. 
