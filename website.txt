@@ -1,4 +1,4 @@
-http://example.com/
+https://linkchecker.github.io/linkchecker/index.html
 
 ### IMPORTANT INFO ###
 # Add website link on the first line. Single Link only, no multiple. 
