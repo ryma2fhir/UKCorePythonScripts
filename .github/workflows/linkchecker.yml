@@ -18,7 +18,7 @@ jobs:
       - name: Check link
         run: |
           echo $(head -n 1 ./actions/website.txt)
-        #  wget -q --spider $(head -n 1 ./actions/website.txt)
+          wget --spider $(head -n 1 ./actions/website.txt)
       
       - name: execute linkchecker 
         run: |
