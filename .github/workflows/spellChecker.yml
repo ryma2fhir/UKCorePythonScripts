@@ -31,5 +31,5 @@ jobs:
       - name: execute Aspell spellchecker
         run: |
           #aspell dump dicts
-          cat OutputLinks.txt | while read p; do wget -nv -O - $p | aspell list -H --camel-case --lang en_GB -p ./actions/.aspell.en.pws |sort| uniq -c; echo -e '\n'; done;
+          cat OutputLinks.txt | while read p; do wget -nv -O - $p | aspell list -H --add-html-skip script --camel-case --lang en_GB -p ./actions/.aspell.en.pws |sort| uniq -c; echo -e '\n'; done;
     
