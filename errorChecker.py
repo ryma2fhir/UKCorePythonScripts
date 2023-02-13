@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup # this module helps in web scrapping.
 import requests  # this module helps us to download a web page
 
 with open('website.txt', 'r') as file:
-    data = file.read().rstrip()
+    data = file.readline().strip('\n')
     
 '''retrieve all links within the page, including the banner, and filters to remove href="#" or external links and returning a list of valid links'''
 def ListOfLinks(url):
