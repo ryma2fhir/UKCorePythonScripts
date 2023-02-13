@@ -1,6 +1,6 @@
-https://linkchecker.github.io/linkchecker/index.html
+https://simplifier.net/guide/hl7fhirukcoredesignanddevelopmentapproach?version=current
 
 ### IMPORTANT INFO ###
 # Add website link on the first line. Single Link only, no multiple. 
-# Needs to be on the https://simplifier.net/ 
-# All relevant pages to be scanned need to have a link from the website link above, e.g. within the banner
+# Needs to be on the https://simplifier.net/ domain.
+# All relevant pages to be scanned need to have a link from the website link above, e.g. within the banner.
