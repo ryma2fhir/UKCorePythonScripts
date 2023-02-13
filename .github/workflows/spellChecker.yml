@@ -30,6 +30,6 @@ jobs:
           
       - name: execute Aspell spellchecker
         run: |
-          aspell dump dicts
-          #cat OutputLinks.txt | while read p; do wget -nv -O - $p | aspell list -H --camel-case -p ./actions/.aspell.en.pws |sort| uniq -c; echo -e '\n'; done;
+          #aspell dump dicts
+          cat OutputLinks.txt | while read p; do wget -nv -O - $p | aspell list -H --camel-case -d en_GB-variant_1 -p ./actions/.aspell.en.pws |sort| uniq -c; echo -e '\n'; done;
     
