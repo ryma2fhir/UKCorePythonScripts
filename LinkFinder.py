@@ -23,6 +23,7 @@ def ListOfLinks(url):
         if isinstance(site, str) and 'http' not in site and site!='#':
             print(site)
             websites.append(site)
+    print('\n\n')       
     list_set = set(websites)
     unique_websites = list(list_set)
     return unique_websites
