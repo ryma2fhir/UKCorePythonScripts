@@ -1,6 +1,9 @@
 name: run Spellchecker
 
-on: [push]
+on: 
+  push:
+    paths:
+      - actions/**
 
 jobs:
   build:
