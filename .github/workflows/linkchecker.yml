@@ -17,11 +17,11 @@ jobs:
 
       - name: Check link
         run: |
-          wget -q --spider $(head -n 1 website.txt)
+          wget -q --spider $(head -n 1 actions/website.txt)
       
       - name: execute linkchecker 
         run: |
-          linkchecker -r 2 --check-extern --no-status -f linkcheckerrc $(head -n 1 website.txt) || test $? = 1;
+          linkchecker -r 2 --check-extern --no-status -f linkcheckerrc $(head -n 1 actions/website.txt) || test $? = 1;
                 
         
         
