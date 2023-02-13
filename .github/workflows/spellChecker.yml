@@ -1,4 +1,4 @@
-name: run spellChecker
+name: run Spellchecker
 
 on: [push]
 
@@ -21,8 +21,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
         
-      - name: execute py script # run spellChecker.py
+      - name: execute LinkFinder.py 
         run: |
           python LinkFinder.py
+          
+      - name: execute Aspell spellchecker
+        run: |
           cat OutputLinks.txt | while read p; do wget -nv -O - $p | aspell list -H --camel-case |sort| uniq -c; echo -e '\n'; done;
     
