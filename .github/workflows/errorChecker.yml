@@ -1,6 +1,9 @@
 name: run ErrorChecker.py
 
-on: [push]
+on: 
+  push:
+    paths:
+      - actions/**
 
 jobs:
   build:
