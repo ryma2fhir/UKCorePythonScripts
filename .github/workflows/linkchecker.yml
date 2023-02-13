@@ -18,7 +18,7 @@ jobs:
       - name: Check link
         run: |
           echo 'exit codes can be found at https://everything.curl.dev/usingcurl/returns'
-          url $(head -n 1 ./actions/website.txt) -s -f -o /dev/null
+          curl $(head -n 1 ./actions/website.txt) -s -f -o /dev/null
       
       - name: execute linkchecker 
         run: |
