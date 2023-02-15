@@ -28,7 +28,7 @@ This is set up to only output the errors for each individual page. Uses the conf
 - -f linkcheckerrc - use config file - setup so that it will check any pages <50mb in size. 
 
 ## Spell Checking
-Uses [Aspell](https://www.gnu.org/software/wget/manual/wget.html#Option-Syntax). The script LinkFinder.py crawls through the webpage witin website.txt and filters all relative links before appending https://https://simplifier.net to them to make them absolute links that can be checked. Aspell is then used to check each webpage individually, outputting any mispelt words in a list along with the number of times it occurs within that page.
+Uses [Aspell](https://www.gnu.org/software/wget/manual/wget.html#Option-Syntax). The script LinkFinder.py crawls through the webpage witin website.txt and filters all relative links before appending `https://simplifier.net` to them to make them absolute links that can be checked. Aspell is then used to check each webpage individually, outputting any mispelt words in a list along with the number of times it occurs within that page.
 
 ### Options Used
 #### wget
