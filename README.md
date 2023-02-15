@@ -47,4 +47,3 @@ Uses [Aspell](https://www.gnu.org/software/wget/manual/wget.html#Option-Syntax).
 Cannot ignore capitalised terms, so NHS will stil be checked and will need to be added to the personal dictionary.
 Cannot ignore words with numbers, so HL7 wil be spell checked as HL, and of course will come up as a mispelt word.
 
-TODO get personal dictinary working ###
