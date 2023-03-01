@@ -10,12 +10,12 @@ This file is intended to create a CodeSystems expansion set for codes that resid
 The validator works by scraping the webpage within website.txt for any internal webpage links within the Simplifier Guide. These webpages are then validated individually. 
 
 The website validation is in three parts:
-- HTML Error Checking - This checks each page for any html errors. This captures any errors caused by using Simplifier relative links, e.g {{pagelink: }}, amongst the usual coding errors.
+- HTML Error Checking - This checks each page for any html errors. This captures any errors caused by using Simplifier relative links, e.g `{{pagelink: }}`, amongst the usual coding errors.
 - Link Checking - This checks each page to ensure every link within it is goes to a valid webpage.
 - Spell Checking - This checks the spelling on every page within the site.
 
 ## HTML Error Checking
-Uses the errorChecker.py script. Checks for any html errors on a website using BeautifulSoup's find_all('div',{'class':"error"}). This returns the errors for each individual page.
+Uses the errorChecker.py script. Checks for any html errors on a website using BeautifulSoup's `find_all('div',{'class':"error"})`. This returns the errors for each individual page.
 
 ## Link Checking
 Uses [Linkchecker](https://linkchecker.github.io/linkchecker/index.html) for any broken links.
