@@ -23,6 +23,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r ./IGValidator/requirements.txt
         
-      - name: Execute errorChecker.py
-        run: ./IGValidator/python errorChecker.py
+      - name: HTML Error Check 
+        run: python ./IGValidator/errorChecker.py
     
