@@ -18,12 +18,12 @@ jobs:
           sudo apt install python3-bs4 python3-dnspython python3-requests
           pip3 install linkchecker
 
-      - name: Check link #Checks link is valid. Used as exit code 1 muted in 'execute linkchecker'
+      - name: Check input link is valid #Checks link is valid. Used as exit code 1 muted in 'execute linkchecker'
         run: |
           echo 'exit codes can be found at https://everything.curl.dev/usingcurl/returns'
           curl $(head -n 1 ./IGValidator/website.txt) -s -f -o /dev/null
       
-      - name: execute linkchecker # exit code 1 muted as linkchecker sets it if a link is not valid. This causes the GitHub action to fail.
+      - name: Link Check # exit code 1 muted as linkchecker sets it if a link is not valid. This causes the GitHub action to fail.
         run: |
           linkchecker -r 2 --check-extern --no-status -f linkcheckerrc $(head -n 1 ./IGValidator/website.txt) || test $? = 1;
                 
