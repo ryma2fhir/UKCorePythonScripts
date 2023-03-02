@@ -20,7 +20,7 @@ def ListOfLinks(url):
     print("webpages to check")
     for link in soup.find_all('a'):
         site = link.get('href')
-        if isinstance(site, str) and 'http' not in site and site!='#':
+        if isinstance(site, str) and site[0]=='/' and site[1:7]!='search':
             print(site)
             websites.append(site)
     print('\n\n')       
