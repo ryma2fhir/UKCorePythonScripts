@@ -7,6 +7,16 @@ The website validation is in three parts:
 - Link Checking - This checks each page to ensure every link within it is goes to a valid webpage.
 - Spell Checking - This checks the spelling on every page within the site.
 
+## Instructions
+
+1. Edit the file `website.txt` ensuring the website you want scraped is entered on the first line. Note: Only Simplifier.net guides will work with this checker.  
+2. Click the `Actions` button. the top 3 actions will be the individual checkers needed. Wait until there is a green tick next to each. 
+3. Within each Action click the `Build` button
+4. Within the Build click the following for the results:
+- HTML Error Check
+- Link Check
+- Spell Check
+5. 
 ## HTML Error Checking
 Uses the errorChecker.py script. Checks for any html errors on a website using BeautifulSoup's `find_all('div',{'class':"error"})`. This returns the errors for each individual page.
 
