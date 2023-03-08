@@ -16,7 +16,7 @@ The website validation is in three parts:
 - HTML Error Check
 - Link Check
 - Spell Check
-5. 
+
 ## HTML Error Checking
 Uses the errorChecker.py script. Checks for any html errors on a website using BeautifulSoup's `find_all('div',{'class':"error"})`. This returns the errors for each individual page.
 
@@ -45,6 +45,13 @@ Uses [Aspell](https://www.gnu.org/software/wget/manual/wget.html#Option-Syntax).
 - `--lang en_GB`  - Sets dictionary to British English
 - `-p ./actions/.aspell.en.pws` - Personal dictionary for any words that are correct but not in the main dictionary. Each additional word needs to be on a seperate line. Alphabetical characters only.
 -  `|sort| uniq -c;` - Sorts the list for each individual webpage alphabetically, only shows unique words, adds a count of how many times each word appears.
+
+### Adding words to the Dictionary
+It is possible to add common words that are correct into the dictionary. 
+- The dictionary is named `.aspell.en.pws`
+- Add each word on a seperate line
+- Each word is case-sensitive
+- No numbers or symbols allowed
 
 ##### limtations to Aspell
 Cannot ignore capitalised terms, so NHS will stil be checked and will need to be added to the personal dictionary.
