@@ -31,7 +31,7 @@ This is set up to only output the errors for each individual page. Uses the conf
 - `-f linkcheckerrc` - use config file - setup so that it will check any pages <50mb in size. 
 
 ### LinkCheckerError: File size too large
-If the reponse is `[url-error-getting-content] could not get content:` `LinkCheckerError: File size too large` the page size is larger than what the maximum has been set. To fix this increase the `maxfilesizedownload` within the `linkcheckerrc` file (line 177) accordingly.
+If the reponse is `[url-error-getting-content] could not get content:` `LinkCheckerError: File size too large` the page size is larger than what the maximum has been set. To fix this increase the `maxfilesizedownload` (line 177) within the `linkcheckerrc` file accordingly.
 
 ## Spell Checking
 Uses [Aspell](https://www.gnu.org/software/wget/manual/wget.html#Option-Syntax). The script LinkFinder.py crawls through the webpage witin website.txt and filters all relative links before prefixing `https://simplifier.net` converting them to absolute links that can be checked. Aspell is then used to check each webpage individually, outputting any mispelt words in a list along with the number of times it occurs within that page.
