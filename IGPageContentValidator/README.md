@@ -52,6 +52,7 @@ Uses [Aspell](https://www.gnu.org/software/wget/manual/wget.html#Option-Syntax).
 ### Adding words to the Dictionary
 It is possible to add common words that are correct into the dictionary. 
 - The dictionary is named `.aspell.en.pws`
+- The file SHALL begin with `personal_ws-1.1 en <number>` where `<number>` is roughly the number of words within the dictionary 
 - Add each word on a seperate line
 - Each word is case-sensitive
 - No numbers or symbols allowed
