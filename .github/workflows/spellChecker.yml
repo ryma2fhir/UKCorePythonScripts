@@ -24,9 +24,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r ./IGPageContentValidator/requirements.txt
         
-      - name: execute LinkFinder.py 
+      - name: execute relToAbsLinks.py 
         run: |
-          python ./IGPageContentValidator/LinkFinder.py
+          python ./IGPageContentValidator/relToAbsLinks.py
           
       - name: Execute Spell Check
         run: |
