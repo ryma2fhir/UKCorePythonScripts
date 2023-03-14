@@ -1,27 +1,10 @@
 # -*- coding: utf-8 -*-
 """ 
-This script checks all the pages within a website for any error messages
+This script checks webpages for any error messages
 """
-from bs4 import BeautifulSoup # this module helps in web scrapping.
-import requests  # this module helps us to download a web page
 
-with open('./IGPageContentValidator/website.txt', 'r') as file:
-    data = file.readline().strip('\n')
-    
-'''retrieve all links within the page, including the banner, and filters to remove href="#" or external links and returning a list of valid links'''
-def ListOfLinks(url):
-    soup = RequestData(url)
-    websites = []
-    print("webpages to check")
-    for link in soup.find_all('a'):
-        site = link.get('href')
-        if isinstance(site, str) and site[0]=='/' and site[1:7]!='search':
-            print(site)
-            websites.append(site)
-    print('\n\n')
-    list_set = set(websites)
-    unique_websites = list(list_set)
-    return unique_websites
+from linkScraper import *
+
 
 ''' Interates over ListOfLinks returning any pages that have errors '''
 def FindErrors(url):
@@ -38,9 +21,5 @@ def FindErrors(url):
             print()
     print("Check Complete")
     
-def RequestData(url):
-    data  = requests.get(url).text
-    soup = BeautifulSoup(data,"html.parser")
-    return soup
 
 FindErrors(data)
