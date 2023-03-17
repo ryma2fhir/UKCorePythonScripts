@@ -1,4 +1,4 @@
-# Action for the IGPageContentValidator to check any HTML errors on the IG webpage
+# Action for the IGPageContentValidator to check any HTML errors within the IG webpages
 name: run HTML Error Checker
 
 on: 
