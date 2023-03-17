@@ -1,3 +1,4 @@
+# Action for the IGPageContentValidator to check any bad hyperlinks on the IG webpages
 name: run Link Checker
 
 on: 
