@@ -1,9 +1,9 @@
 import xml.etree.ElementTree as ET
-import 
+import os
 
 paths = ['structuredefinitions','valuesets','codesystems']
 for path in paths:
-    files = os.listdir('./'+path)
+    files = "https://github.com/NHSDigital/FHIR-R4-UKCORE-STAGING-MAIN/tree/develop/"+path
     print(path)
     for file in files:
         
