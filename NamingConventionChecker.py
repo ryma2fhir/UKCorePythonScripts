@@ -3,7 +3,7 @@ import os
 
 paths = ['structuredefinitions','valuesets','codesystems']
 for path in paths:
-    files = "https://github.com/NHSDigital/FHIR-R4-UKCORE-STAGING-MAIN/tree/develop/"+path
+    files = "https://github.com/NHSDigital/FHIR-R4-UKCORE-STAGING-MAIN/"+path
     print(path)
     for file in files:
         
