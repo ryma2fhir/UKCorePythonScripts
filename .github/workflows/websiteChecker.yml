@@ -3,7 +3,7 @@ name: Simplifier IG Website Checking
 on: 
   push:
     paths:
-      - IGPageContentValidator/**
+    - IGPageContentValidator/**
 
 jobs:
   job1:
