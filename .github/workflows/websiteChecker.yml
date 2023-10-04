@@ -1,4 +1,3 @@
-# Action for the IGPageContentValidator to check any HTML errors within the IG webpages
 name: Simplifier IG Website Checking
 
 on: 
