@@ -48,9 +48,9 @@ jobs:
         linkchecker -r 2 --check-extern --no-status -f ./IGPageContentValidator/linkcheckerrc $(head -n 1 ./IGPageContentValidator/website.txt) || test $? = 1;
   
   job3:
-     name: spell checking
-     runs-on: ubuntu-latest
-     steps:
+    name: spell checking
+    runs-on: ubuntu-latest
+    steps:
     
     - name: checkout repo content
       uses: actions/checkout@v3
