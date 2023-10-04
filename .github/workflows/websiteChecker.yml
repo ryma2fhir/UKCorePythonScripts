@@ -27,8 +27,7 @@ jobs:
             pip install -r ./IGPageContentValidator/requirements.txt
         
         - name: Execute HTML Error Check 
-          run: python ./IGPageContentValidator/errorChecker.py
-		
+          run: python ./IGPageContentValidator/errorChecker.py        
   job2:
     name: url link checking
     build:
