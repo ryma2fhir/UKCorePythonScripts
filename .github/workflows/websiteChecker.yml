@@ -1,9 +1,11 @@
 ---
 name: Simplifier IG Website Checking
 on:
-  push:
-    paths:
-      - IGPageContentValidator/**
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+    inputs:
+      websiteurl:
+        default: "https://simplifier.net/guide/uk-core-implementation-guidance-directory?version=current"
 jobs:
   job1:
     name: html Error Checking
@@ -36,7 +38,7 @@ jobs:
           echo 'exit codes can be found at
           https://everything.curl.dev/usingcurl/returns'
 
-          curl $(head -n 1 ./IGPageContentValidator/website.txt) -s -f -o /dev/null
+          curl ${{ github.event.inputs.websiteurl }} -s -f -o /dev/null
       - name: Execute Link Check
         run: >
           linkchecker -r 2 --check-extern --no-status -f
@@ -58,8 +60,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r ./IGPageContentValidator/requirements.txt
       - name: execute relToAbsLinks.py
-        run: |
-          python ./IGPageContentValidator/relToAbsLinks.py
+        run: python ./IGPageContentValidator/relToAbsLinks.py
             
       - name: Execute Spell Check
         run: cat OutputLinks.txt | while read p; do wget -nv -O - $p | aspell list -H  --camel-case --lang en_GB --add-html-skip=nocheck -p ./IGPageContentValidator/.aspell.en.pws |sort| uniq -c; echo -e '\n'; done;
