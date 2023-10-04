@@ -42,8 +42,7 @@ jobs:
       - name: Execute Link Check
         run: >
           linkchecker -r 2 --check-extern --no-status -f
-          ./IGPageContentValidator/linkcheckerrc $(head -n 1
-          ./IGPageContentValidator/website.txt) || test $? = 1;
+          ./IGPageContentValidator/linkcheckerrc ${{ github.event.inputs.websiteurl }} || test $? = 1;
   job3:
     name: spell checking
     runs-on: ubuntu-latest
