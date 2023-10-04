@@ -22,7 +22,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r ./IGPageContentValidator/requirements.txt
       - name: Execute HTML Error Check
-        run: python ./IGPageContentValidator/errorChecker.py
+        run: INPUT_STORE=${{ github.event.inputs.websiteurl }} python ./IGPageContentValidator/errorChecker.py
   job2:
     name: url link checking
     runs-on: ubuntu-latest
